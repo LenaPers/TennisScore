@@ -1,0 +1,1 @@
+C:\Users\perle\Documents\GitHub\TennisScore\TennisScoreUWP\TennisScoreUWP\TennisScoreUWP.csproj;x86

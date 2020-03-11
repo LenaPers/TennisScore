@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="TennisScoreUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TennisScoreUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+
+        <StackPanel HorizontalAlignment="Center"
+                    Grid.Row="0"                    
+                    x:Name="stackPanel" 
+                    Width="924">
+
+            <TextBlock HorizontalAlignment="Center" Margin="10">Who Scored?</TextBlock>
+
+            <Button Grid.Row="0" Background="Pink" x:Name ="Aclick" Click="PlayerAClick" HorizontalAlignment="Center">Player A</Button>
+            <Button Grid.Row="0" Background="Pink" x:Name ="Bclick" Click="PlayerBClick" HorizontalAlignment="Center" Margin="10">Player B</Button>
+
+            <TextBlock>Score Panel:</TextBlock>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border BorderThickness="1" BorderBrush="LightPink">
+                <TextBlock Grid.Column="0" Grid.Row="0">Player A</TextBlock>
+                </Border>
+                
+                <Border Grid.Column="1" BorderThickness="1" BorderBrush="LightPink">
+                    <TextBlock Grid.Column="1">Player B</TextBlock>
+                </Border>
+                <Border BorderThickness="1" Grid.Row="1" BorderBrush="LightPink">
+                    <TextBlock Grid.Column="0" Grid.Row="1" x:Name="ScorePanelPlayerA"> </TextBlock>
+                </Border>
+                <Border BorderThickness="1" Grid.Row="1" Grid.Column="1" BorderBrush="LightPink">
+                    <TextBlock Grid.Column="1" Grid.Row="1" x:Name="ScorePanelPlayerB"> </TextBlock>
+                </Border>
+                
+                <TextBlock Margin ="15" Grid.Column="0" Grid.Row="2" x:Name="Winner"></TextBlock>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>
